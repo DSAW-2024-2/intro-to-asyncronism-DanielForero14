@@ -1,6 +1,6 @@
-/* Estilos generales */
+
 body {
-    font-family: 'Space Grotesk', sans-serif; /* Fuente principal para el texto general */
+    font-family: 'Space Grotesk', sans-serif; 
     background-image: url('https://c.wallhere.com/photos/85/21/anime_video_games_Pok_mon_Pikachu_Squirtle_Bulbasaur_Charmander-1787165.jpg!d');
     background-repeat: no-repeat;
     background-size: cover;
@@ -11,7 +11,6 @@ body {
     padding: 20px;
 }
 
-/* Estilo para la imagen "Pokedex" */
 #reset-page {
     border: none !important;
     background-color: #00000000 !important;
@@ -31,7 +30,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Estilos para las imágenes del encabezado */
 .header-image {
     display: block;
     margin: 0 auto;
@@ -43,7 +41,7 @@ body {
     margin-bottom: 5px;
 }
 
-/* Ajustes específicos para imágenes de encabezado */
+
 #header-title {
     width: 100%;
     max-width: 1000px;
@@ -58,7 +56,7 @@ body {
     min-width: 200px;
 }
 
-/* Estilos para el formulario de búsqueda */
+
 #search-form,
 #search-id-form {
     margin: 5px auto;
@@ -70,11 +68,11 @@ body {
 }
 
 #search-form {
-    margin-bottom: 10px; /* Espacio entre los formularios */
+    margin-bottom: 10px; 
 }
 
 #search-id-form {
-    margin-top: 10px; /* Espacio entre los formularios */
+    margin-top: 10px; 
 }
 
 #pokemon-name,
@@ -82,33 +80,32 @@ body {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    width: 100%; /* Asegura que el campo de entrada se ajuste al contenedor */
-    max-width: 300px; /* Ajusta el ancho máximo del campo de entrada */
+    width: 100%; 
+    max-width: 300px; 
     font-size: 1em;
-    font-family: 'Space Grotesk', sans-serif; /* Fuente para la barra de búsqueda */
+    font-family: 'Space Grotesk', sans-serif; 
 }
 
 button {
     padding: 10px 10px;
-    border: none; /* Eliminamos el borde */
+    border: none; 
     border-radius: 5px;
     background-color: #e6b800;
     color: #000000;
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s; /* Incluye transición para la sombra */
-    font-family: 'Francois One', sans-serif; /* Fuente para los botones */
-    width: 100%; /* Asegura que el botón se ajuste al contenedor */
-    max-width: 120px; /* Ajusta el ancho máximo del botón */
-    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.4); /* Sombra azul */
+    transition: background-color 0.3s, box-shadow 0.3s; 
+    font-family: 'Francois One', sans-serif; 
+    width: 100%; 
+    max-width: 120px;
+    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.4); 
 }
 
 button:hover {
     background-color: #d87e09;
-    box-shadow: 0 6px 12px rgba(0, 0, 255, 0.6); /* Aumenta la sombra al hacer hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 255, 0.6); 
 }
 
-/* Estilos del filtro de tipos */
 .filter-menu {
     text-align: center;
     margin: 0;
@@ -123,7 +120,6 @@ button:hover {
     margin: 0 auto;
 }
 
-/* Estilos para los botones de filtro */
 .filter-btn {
     padding: 5px;
     background-color: #e6b800;
@@ -131,21 +127,20 @@ button:hover {
     color: #333;
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Incluye transición para la sombra */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; 
     flex: 1;
     min-width: 70px;
     max-width: 200px;
-    font-family: 'Francois One', sans-serif; /* Fuente para los botones de filtro */
-    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.4); /* Sombra azul */
+    font-family: 'Francois One', sans-serif; 
+    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.4); 
 }
 
 .filter-btn:hover {
     background-color: #d87e09;
     transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 255, 0.6); /* Aumenta la sombra al hacer hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 255, 0.6); 
 }
 
-/* Estilos de la lista de Pokémon */
 .pokemon-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -176,10 +171,9 @@ button:hover {
     font-size: medium;
     margin: 10px 0;
     color: #333;
-    font-family: 'Space Grotesk', sans-serif; /* Fuente para los títulos de Pokémon */
+    font-family: 'Space Grotesk', sans-serif; 
 }
 
-/* Estilo para la imagen de bienvenida */
 .welcome-image {
     display: block;
     margin: 20px auto;
@@ -187,12 +181,10 @@ button:hover {
     height: auto;
 }
 
-/* Ocultar la imagen y la lista de Pokémon */
 .hide {
     display: none;
 }
 
-/* Media Queries para ajustes responsivos */
 @media (max-width: 768px) {
     #search-form,
     #search-id-form {

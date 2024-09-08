@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Mostrar los botones de filtro y la imagen de bienvenida al cargar la página
   showWelcomeImage();
 
-  // Manejar la entrada del formulario de búsqueda
   document
     .getElementById("search-form")
     .addEventListener("submit", async (event) => {
@@ -13,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
       searchPokemon(pokemonName);
     });
 
-  // Manejar la entrada del formulario de búsqueda por ID
   document
     .getElementById("search-id-form")
     .addEventListener("submit", async (event) => {
@@ -22,18 +19,16 @@ document.addEventListener("DOMContentLoaded", () => {
       searchPokemonById(pokemonId);
     });
 
-  // Validación del campo de búsqueda por nombre
   document
     .getElementById("search-form")
     .addEventListener("submit", function (event) {
       const nameInput = document.getElementById("pokemon-name").value;
       if (/[\d]/.test(nameInput)) {
         alert("Por favor, ingresa solo letras para buscar por nombre.");
-        event.preventDefault(); // Evita el envío del formulario
+        event.preventDefault(); 
       }
     });
 
-  // Función para buscar Pokémon por nombre
   async function searchPokemon(name) {
     const pokemonListContainer = document.getElementById("pokemon-list");
     pokemonListContainer.innerHTML = "";
@@ -51,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Función para buscar Pokémon por ID
   async function searchPokemonById(id) {
     const pokemonListContainer = document.getElementById("pokemon-list");
     pokemonListContainer.innerHTML = "";
@@ -69,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Función para mostrar los detalles del Pokémon en el orden deseado
   function displayPokemon(pokemon) {
     const pokemonCard = document.createElement("div");
     pokemonCard.className = "pokemon-card";
@@ -85,7 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("pokemon-list").appendChild(pokemonCard);
   }
 
-  // Función para filtrar Pokémon por tipo
   window.filterByType = async (type) => {
     const pokemonListContainer = document.getElementById("pokemon-list");
     pokemonListContainer.innerHTML = "";
@@ -111,15 +103,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Función para mostrar la imagen de bienvenida y botones de filtro al inicio
   function showWelcomeImage() {
     document.getElementById("welcome-image").style.display = "block";
   }
 
-  // Función para reiniciar la página al estado inicial
   document.getElementById("reset-page").addEventListener("click", () => {
     document.getElementById("pokemon-name").value = "";
-    document.getElementById("pokemon-id").value = ""; // Limpia el campo de búsqueda por ID
+    document.getElementById("pokemon-id").value = ""; 
     document.getElementById("pokemon-list").innerHTML = "";
     showWelcomeImage();
   });
