@@ -36,6 +36,8 @@
           type="text"
           id="pokemon-name"
           placeholder="Buscar Pokémon por nombre"
+          pattern="[A-Za-z\s]+"
+          title="Por favor, ingresa solo letras"
           required
         />
         <button type="submit">Buscar</button>
@@ -52,7 +54,6 @@
         />
         <button type="submit">Buscar por ID</button>
       </form>
-      
     </header>
 
     <main class="filter-menu">
@@ -66,48 +67,22 @@
 
       <div class="filter-buttons">
         <button class="filter-btn" onclick="filterByType('bug')">Bug</button>
-        <button class="filter-btn" onclick="filterByType('dragon')">
-          Dragon
-        </button>
-        <button class="filter-btn" onclick="filterByType('electric')">
-          Electric
-        </button>
-        <button class="filter-btn" onclick="filterByType('fairy')">
-          Fairly
-        </button>
-        <button class="filter-btn" onclick="filterByType('fighting')">
-          Fighting
-        </button>
+        <button class="filter-btn" onclick="filterByType('dragon')">Dragon</button>
+        <button class="filter-btn" onclick="filterByType('electric')">Electric</button>
+        <button class="filter-btn" onclick="filterByType('fairy')">Fairy</button>
+        <button class="filter-btn" onclick="filterByType('fighting')">Fighting</button>
         <button class="filter-btn" onclick="filterByType('fire')">Fire</button>
-        <button class="filter-btn" onclick="filterByType('flying')">
-          Flying
-        </button>
-        <button class="filter-btn" onclick="filterByType('ghost')">
-          Ghost
-        </button>
-        <button class="filter-btn" onclick="filterByType('grass')">
-          Grass
-        </button>
-        <button class="filter-btn" onclick="filterByType('ground')">
-          Ground
-        </button>
+        <button class="filter-btn" onclick="filterByType('flying')">Flying</button>
+        <button class="filter-btn" onclick="filterByType('ghost')">Ghost</button>
+        <button class="filter-btn" onclick="filterByType('grass')">Grass</button>
+        <button class="filter-btn" onclick="filterByType('ground')">Ground</button>
         <button class="filter-btn" onclick="filterByType('ice')">Ice</button>
-        <button class="filter-btn" onclick="filterByType('normal')">
-          Normal
-        </button>
-        <button class="filter-btn" onclick="filterByType('poison')">
-          Poison
-        </button>
-        <button class="filter-btn" onclick="filterByType('psychic')">
-          Psychic
-        </button>
+        <button class="filter-btn" onclick="filterByType('normal')">Normal</button>
+        <button class="filter-btn" onclick="filterByType('poison')">Poison</button>
+        <button class="filter-btn" onclick="filterByType('psychic')">Psychic</button>
         <button class="filter-btn" onclick="filterByType('rock')">Rock</button>
-        <button class="filter-btn" onclick="filterByType('steel')">
-          Steel
-        </button>
-        <button class="filter-btn" onclick="filterByType('water')">
-          Wather
-        </button>
+        <button class="filter-btn" onclick="filterByType('steel')">Steel</button>
+        <button class="filter-btn" onclick="filterByType('water')">Water</button>
       </div>
     </main>
 

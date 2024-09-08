@@ -15,7 +15,7 @@ body {
 #reset-page {
     border: none !important;
     background-color: #00000000 !important;
-    box-shadow: none  !important;
+    box-shadow: none !important;
     position: fixed;
     top: 2px;
     left: 2px;
@@ -65,7 +65,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    width: 90%;
+    width: 100%;
     max-width: 500px;
 }
 
@@ -82,7 +82,8 @@ body {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    width: 200px; /* Ajusta el ancho según tus necesidades */
+    width: 100%; /* Asegura que el campo de entrada se ajuste al contenedor */
+    max-width: 300px; /* Ajusta el ancho máximo del campo de entrada */
     font-size: 1em;
     font-family: 'Space Grotesk', sans-serif; /* Fuente para la barra de búsqueda */
 }
@@ -97,7 +98,8 @@ button {
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s; /* Incluye transición para la sombra */
     font-family: 'Francois One', sans-serif; /* Fuente para los botones */
-    width: 120px; /* Ajusta el ancho según tus necesidades */
+    width: 100%; /* Asegura que el botón se ajuste al contenedor */
+    max-width: 120px; /* Ajusta el ancho máximo del botón */
     box-shadow: 0 4px 8px rgba(0, 0, 255, 0.4); /* Sombra azul */
 }
 
@@ -181,7 +183,7 @@ button:hover {
 .welcome-image {
     display: block;
     margin: 20px auto;
-    width: 500px;
+    width: 200px;
     height: auto;
 }
 
