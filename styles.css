@@ -1,0 +1,219 @@
+/* Estilos generales */
+body {
+    font-family: 'Space Grotesk', sans-serif; /* Fuente principal para el texto general */
+    background-image: url('https://c.wallhere.com/photos/85/21/anime_video_games_Pok_mon_Pikachu_Squirtle_Bulbasaur_Charmander-1787165.jpg!d');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilo para la imagen "Pokedex" */
+#reset-page {
+    position: fixed;
+    top: 2px;
+    left: 2px;
+    width: 20%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s;
+    z-index: 1000;
+    padding: 0%;
+}
+
+#reset-page:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para las imágenes del encabezado */
+.header-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.header {
+    margin-bottom: 5px;
+}
+
+/* Ajustes específicos para imágenes de encabezado */
+#header-title {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    min-width: 270px;
+}
+
+#header-subtitle {
+    width: 100%;
+    max-width: 900px;
+    height: auto;    
+    min-width: 200px;
+}
+
+/* Estilos para el formulario de búsqueda */
+#search-form {
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+}
+
+#pokemon-name {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+    font-size: 1em;
+    font-family: 'Space Grotesk', sans-serif; /* Fuente para la barra de búsqueda */
+}
+
+button {
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #60b1e7;
+    color: #000000;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Francois One', sans-serif; /* Fuente para los botones */
+    width: 100%;
+    max-width: 200px;
+}
+
+button:hover {
+    background-color: #e6b800;
+}
+
+/* Estilos del filtro de tipos */
+.filter-menu {
+    text-align: center;
+    margin: 0;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Estilos para los botones de filtro */
+.filter-btn {
+    padding: 5px;
+    background-color: #60b1e7;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    flex: 1;
+    min-width: 70px;
+    max-width: 200px;
+    font-family: 'Francois One', sans-serif; /* Fuente para los botones de filtro */
+}
+
+.filter-btn:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
+
+/* Estilos de la lista de Pokémon */
+.pokemon-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.pokemon-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.pokemon-card:hover {
+    transform: scale(1.05);
+}
+
+.pokemon-card img {
+    width: 100px;
+    height: 100px;
+}
+
+.pokemon-card h2 {
+    margin: 10px 0;
+    color: #333;
+    font-family: 'Space Grotesk', sans-serif; /* Fuente para los títulos de Pokémon */
+}
+
+/* Estilo para la imagen de bienvenida */
+.welcome-image {
+    display: block;
+    margin: 20px auto;
+    width: 300px;
+    height: auto;
+}
+
+/* Ocultar la imagen y la lista de Pokémon */
+.hide {
+    display: none;
+}
+
+/* Media Queries para ajustes responsivos */
+@media (max-width: 768px) {
+    #search-form {
+        width: 80%;
+    }
+
+    #pokemon-name {
+        max-width: 400px;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 8px 12px;
+        max-width: 150px;
+    }
+
+    #header-title,
+    #header-subtitle {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    #search-form {
+        width: 90%;
+    }
+
+    #pokemon-name {
+        max-width: 300px;
+    }
+
+    button {
+        font-size: 0.8em;
+        padding: 6px 10px;
+        max-width: 100px;
+    }
+
+    #header-title,
+    #header-subtitle {
+        max-width: 90%;
+    }
+}

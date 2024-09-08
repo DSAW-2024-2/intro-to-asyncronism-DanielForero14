@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Francois+One&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Imagen para regresar al estado inicial -->
+    <img
+      id="reset-page"
+      class="filter-btn"
+      src="./assets/Pokedex-7-9-2024.png"
+      alt="Pokedex"
+    />
+
+    <header class="header">
+      <!-- Imagen reemplazando el h1 -->
+      <img
+        id="header-title"
+        src="./assets/Bienvenido-a-la-Pokedex-8-9-2024.png"
+        alt="Bienvenido a la Pokedex"
+        class="header-image"
+      />
+
+      <form id="search-form">
+        <input
+          type="text"
+          id="pokemon-name"
+          placeholder="Buscar Pokémon por nombre"
+          required
+        />
+        <button type="submit">Buscar</button>
+      </form>
+    </header>
+
+    <main class="filter-menu">
+      <!-- Imagen reemplazando el h2 -->
+      <img
+        id="header-subtitle"
+        src="./assets/Filtrar-Pok-mon-por-Tipo-8-9-2024.png"
+        alt="Filtrar Pokémon por Tipo"
+        class="header-image"
+      />
+
+      <div class="filter-buttons">
+        <button class="filter-btn" onclick="filterByType('bug')">Bug</button>
+        <button class="filter-btn" onclick="filterByType('dragon')">
+          Dragon
+        </button>
+        <button class="filter-btn" onclick="filterByType('electric')">
+          Electric
+        </button>
+        <button class="filter-btn" onclick="filterByType('fairy')">
+          Fairly
+        </button>
+        <button class="filter-btn" onclick="filterByType('fighting')">
+          Fighting
+        </button>
+        <button class="filter-btn" onclick="filterByType('fire')">Fire</button>
+        <button class="filter-btn" onclick="filterByType('flying')">
+          Flying
+        </button>
+        <button class="filter-btn" onclick="filterByType('ghost')">
+          Ghost
+        </button>
+        <button class="filter-btn" onclick="filterByType('grass')">
+          Grass
+        </button>
+        <button class="filter-btn" onclick="filterByType('ground')">
+          Ground
+        </button>
+        <button class="filter-btn" onclick="filterByType('ice')">Ice</button>
+        <button class="filter-btn" onclick="filterByType('normal')">
+          Normal
+        </button>
+        <button class="filter-btn" onclick="filterByType('poison')">
+          Poison
+        </button>
+        <button class="filter-btn" onclick="filterByType('psychic')">
+          Psychic
+        </button>
+        <button class="filter-btn" onclick="filterByType('rock')">Rock</button>
+        <button class="filter-btn" onclick="filterByType('steel')">
+          Steel
+        </button>
+        <button class="filter-btn" onclick="filterByType('water')">
+          Wather
+        </button>
+      </div>
+    </main>
+
+    <section id="pokemon-list" class="pokemon-list"></section>
+
+    <!-- Imagen de bienvenida -->
+    <img
+      id="welcome-image"
+      src="https://i.gifer.com/origin/06/068c8f36ce4e0216bcc86ccc2e2401a0_w200.gif"
+      alt="Imagen de bienvenida"
+      class="welcome-image"
+    />
+
+    <script src="script.js"></script>
+  </body>
+</html>
