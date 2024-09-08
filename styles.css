@@ -13,6 +13,9 @@ body {
 
 /* Estilo para la imagen "Pokedex" */
 #reset-page {
+    border: none !important;
+    background-color: #00000000 !important;
+    box-shadow: none  !important;
     position: fixed;
     top: 2px;
     left: 2px;
@@ -74,23 +77,24 @@ body {
     font-size: 1em;
     font-family: 'Space Grotesk', sans-serif; /* Fuente para la barra de búsqueda */
 }
-
 button {
     padding: 10px 10px;
-    border: none;
+    border: none; /* Eliminamos el borde */
     border-radius: 5px;
-    background-color: hsl(288, 100%, 74%);
+    background-color: rgb(216, 191, 216);
     color: #000000;
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Incluye transición para la sombra */
     font-family: 'Francois One', sans-serif; /* Fuente para los botones */
     width: 100%;
     max-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.4); /* Sombra azul */
 }
 
 button:hover {
     background-color: #e6b800;
+    box-shadow: 0 6px 12px rgba(0, 0, 255, 0.6); /* Aumenta la sombra al hacer hover */
 }
 
 /* Estilos del filtro de tipos */
@@ -111,23 +115,25 @@ button:hover {
 /* Estilos para los botones de filtro */
 .filter-btn {
     padding: 5px;
-    background-color: hsl(288, 100%, 74%);
-    border: none;
+    background-color: rgb(154, 205, 50);
     border-radius: 5px;
     color: #333;
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Incluye transición para la sombra */
     flex: 1;
     min-width: 70px;
     max-width: 200px;
     font-family: 'Francois One', sans-serif; /* Fuente para los botones de filtro */
+    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.4); /* Sombra azul */
 }
 
 .filter-btn:hover {
     background-color: #e6b800;
     transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 255, 0.6); /* Aumenta la sombra al hacer hover */
 }
+
 
 /* Estilos de la lista de Pokémon */
 .pokemon-list {
