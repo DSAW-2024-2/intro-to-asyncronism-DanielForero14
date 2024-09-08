@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         searchPokemon(pokemonName);
     });
 
+    // Función para buscar Pokémon por nombre
     async function searchPokemon(name) {
         const pokemonListContainer = document.getElementById('pokemon-list');
         pokemonListContainer.innerHTML = '';
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Función para mostrar los detalles del Pokémon
     function displayPokemon(pokemon) {
         const pokemonCard = document.createElement('div');
         pokemonCard.className = 'pokemon-card';
@@ -38,24 +40,36 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('pokemon-list').appendChild(pokemonCard);
     }
 
-    // Función para filtrar por tipo
+    // Función para filtrar Pokémon por tipo
     window.filterByType = async (type) => {
         const pokemonListContainer = document.getElementById('pokemon-list');
         pokemonListContainer.innerHTML = '';
         document.getElementById('welcome-image').style.display = 'none';
         try {
             const response = await fetch(`https://pokeapi.co/api/v2/type/${type}`);
-            const data = await response.json();
-            const promises = data.pokemon.map(pokemonEntry => fetch(pokemonEntry.pokemon.url).then(res => res.json()));
-            const pokemonDetails = await Promise.all(promises);
-            pokemonDetails.forEach(displayPokemon);
+            if (response.ok) {
+                const data = await response.json();
+                const pokemonPromises = data.pokemon.map(pokemonEntry => fetch(pokemonEntry.pokemon.url));
+                const pokemonResponses = await Promise.all(pokemonPromises);
+                const pokemonData = await Promise.all(pokemonResponses.map(response => response.json()));
+                pokemonData.forEach(pokemon => displayPokemon(pokemon));
+            } else {
+                pokemonListContainer.innerHTML = '<p>No Pokémon found for this type.</p>';
+            }
         } catch (error) {
-            console.error('Error filtering Pokémon by type:', error);
+            console.error('Error filtering by type:', error);
         }
-    };
+    }
 
+    // Función para mostrar la imagen de bienvenida y botones de filtro al inicio
     function showWelcomeImage() {
         document.getElementById('welcome-image').style.display = 'block';
-        document.getElementById('pokemon-list').innerHTML = '';
     }
+
+    // Función para reiniciar la página al estado inicial
+    document.getElementById('reset-page').addEventListener('click', () => {
+        document.getElementById('pokemon-name').value = '';
+        document.getElementById('pokemon-list').innerHTML = '';
+        showWelcomeImage();
+    });
 });

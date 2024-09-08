@@ -7,6 +7,27 @@ body {
     padding: 20px;
 }
 
+/* Estilo para el botón "Pokedex" */
+#reset-page {
+    position: fixed; /* Fija el botón en una posición específica */
+    top: 10px; /* Ajusta la distancia desde la parte superior */
+    left: 10px; /* Ajusta la distancia desde la izquierda */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffcc00;
+    color: #333;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+}
+
+#reset-page:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
+
 .header {
     margin-bottom: 30px;
 }
