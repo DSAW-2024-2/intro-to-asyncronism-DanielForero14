@@ -59,24 +59,34 @@ body {
 }
 
 /* Estilos para el formulario de búsqueda */
-#search-form {
+#search-form,
+#search-id-form {
     margin: 5px auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 10px;
     width: 90%;
+    max-width: 500px;
 }
 
-#pokemon-name {
+#search-form {
+    margin-bottom: 10px; /* Espacio entre los formularios */
+}
+
+#search-id-form {
+    margin-top: 10px; /* Espacio entre los formularios */
+}
+
+#pokemon-name,
+#pokemon-id {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    width: 100%;
-    max-width: 500px;
+    width: 200px; /* Ajusta el ancho según tus necesidades */
     font-size: 1em;
     font-family: 'Space Grotesk', sans-serif; /* Fuente para la barra de búsqueda */
 }
+
 button {
     padding: 10px 10px;
     border: none; /* Eliminamos el borde */
@@ -87,8 +97,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s; /* Incluye transición para la sombra */
     font-family: 'Francois One', sans-serif; /* Fuente para los botones */
-    width: 100%;
-    max-width: 200px;
+    width: 120px; /* Ajusta el ancho según tus necesidades */
     box-shadow: 0 4px 8px rgba(0, 0, 255, 0.4); /* Sombra azul */
 }
 
@@ -134,7 +143,6 @@ button:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 255, 0.6); /* Aumenta la sombra al hacer hover */
 }
 
-
 /* Estilos de la lista de Pokémon */
 .pokemon-list {
     display: grid;
@@ -163,6 +171,7 @@ button:hover {
 }
 
 .pokemon-card h2 {
+    font-size: medium;
     margin: 10px 0;
     color: #333;
     font-family: 'Space Grotesk', sans-serif; /* Fuente para los títulos de Pokémon */
@@ -172,7 +181,7 @@ button:hover {
 .welcome-image {
     display: block;
     margin: 20px auto;
-    width: 300px;
+    width: 500px;
     height: auto;
 }
 
@@ -183,11 +192,13 @@ button:hover {
 
 /* Media Queries para ajustes responsivos */
 @media (max-width: 768px) {
-    #search-form {
+    #search-form,
+    #search-id-form {
         width: 80%;
     }
 
-    #pokemon-name {
+    #pokemon-name,
+    #pokemon-id {
         max-width: 400px;
     }
 
@@ -204,11 +215,13 @@ button:hover {
 }
 
 @media (max-width: 480px) {
-    #search-form {
+    #search-form,
+    #search-id-form {
         width: 90%;
     }
 
-    #pokemon-name {
+    #pokemon-name,
+    #pokemon-id {
         max-width: 300px;
     }
 
