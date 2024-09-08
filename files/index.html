@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Bienvenido a la Pokedex</h1>
+        <form id="search-form">
+            <input type="text" id="pokemon-name" placeholder="Buscar Pokémon por nombre" required>
+            <button type="submit">Buscar</button>
+        </form>
+    </header>
+
+    <main class="filter-menu">
+        <h2>Filtrar Pokémon por Tipo</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn" onclick="filterByType('bug')">Bicho</button>
+            <button class="filter-btn" onclick="filterByType('dragon')">Dragón</button>
+            <button class="filter-btn" onclick="filterByType('electric')">Eléctrico</button>
+            <button class="filter-btn" onclick="filterByType('fairy')">Hada</button>
+            <button class="filter-btn" onclick="filterByType('fighting')">Lucha</button>
+            <button class="filter-btn" onclick="filterByType('fire')">Fuego</button>
+            <button class="filter-btn" onclick="filterByType('flying')">Volador</button>
+            <button class="filter-btn" onclick="filterByType('ghost')">Fantasma</button>
+            <button class="filter-btn" onclick="filterByType('grass')">Planta</button>
+            <button class="filter-btn" onclick="filterByType('ground')">Tierra</button>
+            <button class="filter-btn" onclick="filterByType('ice')">Hielo</button>
+            <button class="filter-btn" onclick="filterByType('normal')">Normal</button>
+            <button class="filter-btn" onclick="filterByType('poison')">Veneno</button>
+            <button class="filter-btn" onclick="filterByType('psychic')">Psíquico</button>
+            <button class="filter-btn" onclick="filterByType('rock')">Roca</button>
+            <button class="filter-btn" onclick="filterByType('steel')">Acero</button>
+            <button class="filter-btn" onclick="filterByType('water')">Agua</button>
+        </div>
+    </main>
+
+    <section id="pokemon-list" class="pokemon-list"></section>
+
+    <!-- Imagen de bienvenida -->
+    <img id="welcome-image" src="https://i.gifer.com/origin/06/068c8f36ce4e0216bcc86ccc2e2401a0_w200.gif" alt="Imagen de bienvenida" class="welcome-image">
+
+    <script src="app.js"></script>
+</body>
+</html>
