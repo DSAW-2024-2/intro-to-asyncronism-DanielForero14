@@ -310,18 +310,6 @@ button:hover {
 
 /* Responsive Styles for Medium Screens */
 @media (max-width: 768px) {
-    body {
-        background-image: url("https://www.gratistodo.com/wp-content/uploads/2017/08/Pokemon-Phone-Wallpapers-6.jpg");
-        background-repeat: no-repeat;
-        /* Prevents background from repeating */
-        background-size: cover;
-        /* Ensures background covers the whole viewport */
-        background-attachment: fixed;
-        /* Fixes background position on scroll */
-        background-position: center;
-        /* Centers the background image */
-    }
-
     #search-form,
     #search-id-form {
         width: 80%;
@@ -352,7 +340,7 @@ button:hover {
 
 /* Responsive Styles for Small Screens */
 @media (max-width: 480px) {
-    
+
     body {
         background-image: url("https://www.gratistodo.com/wp-content/uploads/2017/08/Pokemon-Phone-Wallpapers-6.jpg");
         background-repeat: no-repeat;
